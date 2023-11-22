@@ -1,0 +1,43 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Brainstorming App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <h1 id = h1-label>Brainstorming App</h1>
+        <p id = id-label>ID: <span id="my-id">Your ID</span></p>
+            <div class="channel-group">
+            <input id="channel-name" type="text" placeholder="キーワード" />
+            <button id="join">参加</button>
+        </div>
+
+        <label class="switch">
+            <input type="checkbox" id="videoToggle">
+        </label>
+
+        <p id="status">カメラ OFF</p>
+        <video id="local-video" muted playsinline style="display: none;"></video>
+
+        <div id="remote-media-area"></div>
+
+        <div>
+            <input id="data-stream" type="text" placeholder="メッセージ" />
+            <button id="write">送信</button>
+        </div>
+
+        <div id="button-area"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@skyway-sdk/room/dist/skyway_room-latest.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
